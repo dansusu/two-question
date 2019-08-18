@@ -4,20 +4,19 @@
 python
 1
 import re
-res = re.compile(r'\d+\.\d+\.\d+\.\d+')
+res = re.compile(r'\d+\.\d+\.\d+\.\d+')   # 匹配url
 log = '''
-192.168.0.26asasas,192.168.3.26asqwa,192.168.0.26asdasd'''
-results = res.findall(log)
-print(results)
+192.168.0.26asasas,192.168.3.26asqwa,192.168.0.26asdasd'''  # 我们将要输入的内容，log中只是举例
+results = res.findall(log)    # 查找所有匹配的
 log_dic = {}
-for result in results:
+for result in results:  # 遍历
    if not log_dic.get(result):
-      log_dic[result]= 1
+      log_dic[result] = 1  
    else:
       sum = log_dic.get(str(result))
       sum+=1
-      log_dic[result]= sum
-sorted(log_dic, key=lambda x:x[0], reverse=True)
+      log_dic[result] = sum
+sorted(log_dic, key=lambda x:x[0], reverse=False)   # 排序
 print(log_dic)
 2
 a_list = [
@@ -26,5 +25,5 @@ a_list = [
 b_list = [
     "aaa","bbb","ccc"
 ]
-set1 = set(a_list).intersection(set(b_list))
+set1 = set(a_list).intersection(set(b_list))    # 使用set集合的合集
 print(set1)
