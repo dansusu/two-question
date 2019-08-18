@@ -19,6 +19,7 @@ for result in results:  # 遍历
 sorted(log_dic, key=lambda x:x[0], reverse=False)   # 排序
 print(log_dic)
 2
+# 例子
 a_list = [
  "aaa","bbb","vvv"
 ]
