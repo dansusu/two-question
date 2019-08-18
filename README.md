@@ -20,7 +20,6 @@ for result in results:
 sorted(log_dic, key=lambda x:x[0], reverse=True)
 print(log_dic)
 2
-
 a_list = [
  "aaa","bbb","vvv"
 ]
